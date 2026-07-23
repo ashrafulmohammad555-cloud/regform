@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validate()
+        {
+            var fname=document.getElementById("fname").value;
+            var lname=document.getElementById("lname").value;
+            var rollno=document.getElementById("rollno").value;
+            var branch=document.getElementById("branch").value;
+            var email=document.getElementById("email").value;
+            var mobile=document.getElementById("mobile").value;
+            var age=document.getElementById("age").value;
+            var gname=document.getElementById("gname").value;
+
+            if(fname=="")
+            {
+                alert("Enter First Name");
+                return false;
+            }
+            if(lname=="")
+            {
+                alert("Enter Last Name");
+                return false;
+            }
+            if(gname=="")
+            {
+                alert("Enter Guardian name");
+                return false;
+            }
+
+            if(rollno=="")
+            {
+                alert("Enter Roll Number");
+                return false;
+            }
+
+            if(branch=="")
+            {
+                alert("Enter Branch");
+                return false;
+            }
+
+            if(email=="")
+            {
+                alert("Enter Email");
+                return false;
+            }
+
+            if(email.indexOf("@")==-1 || email.indexOf(".")==-1)
+            {
+                alert("Enter Valid Email");
+                return false;
+            }
+
+            if(mobile=="")
+            {
+                alert("Enter Mobile Number");
+                return false;
+            }
+
+            if(mobile.length!=10)
+            {
+                alert("Enter Valid 10 Digit Mobile Number");
+                return false;
+            }
+
+            alert("Registration Successful");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+
+    First Name:
+    <input type="text" id="fname"><br><br>
+
+    Last Name:
+    <input type="text" id="lname"><br><br>  
+
+    Guardian Name:
+    <input type="text" id="gname"><br><br>
+
+    Roll Number:
+    <input type="text" id="rollno"><br><br>
+
+    Branch:
+    <input type="text" id="branch"><br><br>
+
+    Email:
+    <input type="text" id="email"><br><br>
+
+    Mobile Number:
+    <input type="text" id="mobile"><br><br>
+
+    Age:
+    <input type="text" id="age"><br><br>
+ 
+   
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
